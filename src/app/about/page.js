@@ -1,8 +1,8 @@
 import Image from "next/image";
 // import styles from "./page.module.css";
 
-export default function Home() {
+export default function About() {
   return (
-    <h1>Home Route</h1>
+    <h1>About Route</h1>
   );
 }
