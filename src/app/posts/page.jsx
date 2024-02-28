@@ -1,6 +1,17 @@
 // asynchronous server component
 import Link from "next/link"
 
+export const metadata = {
+  title: "Gerald Posts - next.js",
+  description: "A simple blog built with Next.js",
+  image: "https://next-comments-postgres.vercel.app/og-image.png",
+  openGraph: {
+    title: "Next.js Blog",
+    description: "A simple blog built with Next.js",
+    type: "website",
+  },
+}
+
 export default async function PostListPage({ searchParams }) {
   console.log("searchParams", searchParams);
   const response = await fetch("https://jsonplaceholder.typicode.com/posts");

@@ -1,26 +1,32 @@
 import { Inter } from "next/font/google";
 import Link from "next/link"
-// import "./globals.css";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Gerald Lessons",
-  description: "next.js lessons",
+  title: "Posts by Gerald",
+  description: "A simple blog built with Next.js",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <header><h1>The header</h1></header>
-      <nav>The nav bar
-        <Link href="/">Home</Link>
-        <Link href="/posts">Posts</Link>
-        <Link href="/contact">Contact Us</Link>
-        <Link href="/about">About</Link>
-      </nav>
-      <body className={inter.className}>{children}</body>
-      <footer><h1>The footer</h1></footer>
+      <body>
+      <header className="header">
+        <div className="container">
+          <h1 className="logo">A Logo</h1>
+          <nav className="navbar">
+            <Link href="/">Home</Link>
+            <Link href="/posts">Posts</Link>
+            <Link href="/contact">Contact Us</Link>
+            <Link href="/about">About</Link>
+          </nav>
+        </div>
+      </header>
+      <main className={inter.className}>{children}</main>
+      <footer className="footer"><h2>The footer</h2></footer>
+      </body>
     </html>
   );
 }
